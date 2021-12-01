@@ -1,0 +1,5 @@
+mutation browsingHistoryAdd($productIds:[Int]) {
+    browsingHistoryMutation(productIds:$productIds,type:"edit"){
+        status
+    }
+}

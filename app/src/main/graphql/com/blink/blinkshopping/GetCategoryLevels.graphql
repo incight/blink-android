@@ -1,0 +1,50 @@
+query GetMenuCategoryList($categoryid: String!){
+categoryList(filters: {ids: {eq: $categoryid}}) {
+children_count
+id
+level
+name
+path
+description
+include_in_menu
+url_path
+position
+image
+children {
+children_count
+id
+level
+name
+path
+include_in_menu
+url_path
+position
+image
+children {
+children_count
+id
+level
+name
+path
+include_in_menu
+url_path
+position
+image
+children {
+children_count
+id
+level
+name
+path
+include_in_menu
+url_path
+position
+image
+
+}
+}
+}
+}
+
+
+}

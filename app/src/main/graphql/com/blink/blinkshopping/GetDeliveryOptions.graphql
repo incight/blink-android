@@ -1,0 +1,18 @@
+query ProductDeliveryOptions($sku: String, $qty: Int){
+    deliveryoptions(
+        location: null,products:[{ sku:$sku, qty:$qty}]
+    ){
+        qty
+        warehouses
+        options{
+            id
+            name
+            price
+            short_form
+        }
+        best_option
+    }
+}
+
+
+

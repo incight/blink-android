@@ -1,0 +1,6 @@
+query compareWithSimilarProducts($productid:Int){
+    compareWithSimilarProducts(id:$productid){
+        sku
+        entity_id
+    }
+}

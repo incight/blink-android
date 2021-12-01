@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="staggered_view"
+            type="com.blink.blinkshopping.models.DataStaggered" />
+    </data>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvAdsBlockInside"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</layout>

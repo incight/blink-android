@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View" />
+
+        <variable
+            name="brands"
+            type="com.blink.blinkshopping.models.Brands1" />
+
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp5">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="@dimen/dp80"
+            android:layout_height="@dimen/dp45"
+            android:scaleType="fitXY"
+            bind:loadimage="@{brands.img}" />
+
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="product"
+            type="com.blink.blinkshopping.models.ProductItem" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="321dp"
+        android:layout_marginHorizontal="@dimen/_3sdp"
+        android:layout_marginBottom="@dimen/_2sdp"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="2dp">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="321dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/rlayout1"
+                android:layout_width="wrap_content"
+                android:layout_height="321dp"
+                android:padding="3dp"
+                android:visibility="visible">
+
+                <com.blink.blinkshopping.customViews.CustomTextView
+                    android:id="@+id/txt_lefted_items"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp20"
+                    android:background="@drawable/red_cormer_bg"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:paddingLeft="@dimen/dp5"
+                    android:paddingRight="@dimen/dp5"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:text="Only 5 left"
+                    android:textColor="@color/smallblk_redcolor"
+                    android:textSize="@dimen/sp10" />
+
+                <LinearLayout
+                    android:id="@+id/ll_tem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp2"
+                    android:gravity="center">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgItem"
+                        android:layout_width="match_parent"
+                        android:layout_height="135dp"
+                        app:srcCompat="@drawable/ic_blink_logo"
+                        bind:loadimage="@{product.imageUrl()}"/>
+
+                </LinearLayout>
+
+                <com.blink.blinkshopping.customViews.CustomTextView
+                    android:id="@+id/txtItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp2"
+                    android:lines="2"
+                    android:maxLines="2"
+                    android:text="@{product.name}"
+                    android:textColor="@color/product_name_color"
+                    android:textSize="@dimen/sp14" />
+
+                <LinearLayout
+                    android:id="@+id/ltRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:layout_marginTop="@dimen/dp1"
+                    android:orientation="horizontal">
+
+                    <com.blink.blinkshopping.RatingBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:progressed="@drawable/small_star_select"
+                        android:layout_marginRight="@dimen/dp10"
+                        app:progress="@drawable/small_star_deselect"
+                        app:automatic="fully"
+                        app:isIndicator="false"
+                        app:numStars="5"
+                        app:rating="3.5"
+                        app:spacing="3dp"
+                        app:stepSize="0.5" />
+
+                    <androidx.appcompat.widget.AppCompatRatingBar
+                        android:id="@+id/rbRating"
+                        style="@style/VeryYellow.Small.AppCompatRatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="15dp"
+                        android:paddingTop="@dimen/dp3"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:numStars="5"
+                        android:layout_gravity="center"
+                        android:rating="3.5"
+                        android:stepSize="0.5"
+                        android:visibility="gone"
+                        android:theme="@style/VeryYellow.Small.AppCompatRatingBar" />
+
+                    <com.blink.blinkshopping.customViews.CustomTextView
+                        android:id="@+id/txtratingCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="129"
+                        android:textColor="@color/ratingText"
+                        android:textSize="@dimen/sp10" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/llprice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp7"
+                    android:gravity="center|left">
+
+                    <com.blink.blinkshopping.customViews.CustomTextView
+                        android:id="@+id/txtActualPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentStart="true"
+                        android:text="@{product.actualPrice()}"
+                        android:textColor="@color/price_grey_color"
+                        android:visibility="@{product.checkPriceEquality() ? View.INVISIBLE : View.VISIBLE}"
+                        android:textSize="@dimen/sp12" />
+
+                    <com.blink.blinkshopping.customViews.CustomBoldTextView
+                        android:id="@+id/txtOfferedPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:text="@{product.offeredPrice()}"
+                        android:textColor="@color/price_blue_color"
+                        android:textSize="@dimen/sp16" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/lldelivary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp8"
+                    android:layout_marginTop="@dimen/dp7">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:background="@drawable/grey_bf"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/imgVehicle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="@dimen/dp5"
+                            android:layout_marginLeft="@dimen/dp6"
+                            app:srcCompat="@drawable/ic_vehicle_small" />
+
+                        <com.blink.blinkshopping.customViews.CustomTextView
+                            android:id="@+id/txtTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/dp7"
+                            android:layout_toRightOf="@+id/imgVehicle"
+                            android:gravity="center"
+                            android:text="1hr"
+                            android:textSize="@dimen/sp12" />
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ic_fbb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        app:srcCompat="@drawable/ic_fbb_icon" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp27"
+                    android:gravity="center"
+                    android:layout_marginBottom="@dimen/dp7"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/_1sdp"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/grey_bg_stroke"
+                        android:gravity="center">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/imgDecrease"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.33"
+                            app:srcCompat="@drawable/ic_minus_icon" />
+
+                        <com.blink.blinkshopping.customViews.CustomTextView
+                            android:id="@+id/tvQuantity"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.33"
+                            android:gravity="center"
+                            android:text="1"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp12" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/imgIncrease"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.33"
+                            app:srcCompat="@drawable/ic_plus_icon" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/_1sdp"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/yellow_bg"
+                        android:gravity="center">
+
+                        <com.blink.blinkshopping.customViews.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text="@string/add_to_cart"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp12" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llayout2"
+                android:layout_width="165dp"
+                android:layout_height="321dp"
+                android:background="#80000000"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="3dp"
+                android:visibility="gone"
+                android:text="20% Transparent Background"
+                android:textColor="#fff">
+
+                <com.blink.blinkshopping.customViews.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_toRightOf="@+id/imgVehicle"
+                    android:background="@drawable/white_bg"
+                    android:drawableRight="@drawable/ic_baseline_keyboard_arrow_down_24"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:text="View Similar items"
+                    android:textSize="@dimen/sp10" />
+
+                <com.blink.blinkshopping.customViews.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_toRightOf="@+id/imgVehicle"
+                    android:background="@drawable/white_bg"
+                    android:drawableLeft="@drawable/ic_favourite"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:text="Compare"
+                    android:textSize="@dimen/sp10" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/white_bg"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/imgFavourite"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/_5sdp"
+                            app:srcCompat="@drawable/ic_like" />
+
+                        <com.blink.blinkshopping.customViews.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/_10sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:text="Favourite"
+                            android:textSize="@dimen/sp10" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/ic_baseline_keyboard_arrow_down_24" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/light_gray" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|left">
+
+                        <com.blink.blinkshopping.customViews.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/_5sdp"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_toRightOf="@+id/imgVehicle"
+                            android:background="@drawable/grey_bf"
+                            android:gravity="center"
+                            android:paddingHorizontal="@dimen/_5sdp"
+                            android:text="Favorite (20)"
+                            android:textSize="@dimen/sp10" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/light_gray" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|left">
+
+                        <com.blink.blinkshopping.customViews.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/_5sdp"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_toRightOf="@+id/imgVehicle"
+                            android:background="@drawable/grey_bf"
+                            android:gravity="center"
+                            android:paddingHorizontal="@dimen/_5sdp"
+                            android:text="List name (30)"
+                            android:textSize="@dimen/sp10" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/light_gray" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp">
+
+                        <com.blink.blinkshopping.customViews.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:paddingHorizontal="@dimen/_4sdp"
+                            android:text="Create new list"
+                            android:textColor="@color/price_blue_color"
+                            android:textSize="@dimen/sp12" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="26dp"
+                            android:layout_height="23dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/yellow_bg"
+                            app:srcCompat="@drawable/ic_plus_icon" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+    </androidx.cardview.widget.CardView>
+
+</layout>

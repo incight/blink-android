@@ -1,0 +1,150 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'com.apollographql.android'
+
+apply plugin: 'kotlin-kapt'
+
+apply plugin: 'org.jetbrains.kotlin.android.extensions'
+
+//apply plugin: "androidx.navigation.safeargs"
+
+apply plugin: "androidx.navigation.safeargs.kotlin"
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.blink.blinkshopping"
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    androidExtensions {
+        experimental = true
+    }
+
+    kapt {
+        correctErrorTypes = true
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+
+//    viewBinding {
+//        enabled true
+//    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    //Support
+
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+
+    //Structure
+    implementation 'androidx.multidex:multidex:2.0.0'
+
+    //Design
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation "com.airbnb.android:lottie:$lottieVersion"
+    implementation('com.github.thekhaeng:pushdown-anim-click:1.1.1') {
+        exclude group: 'com.android.support'
+    }
+
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'androidx.vectordrawable:vectordrawable:1.0.0'
+
+    //implementation 'com.google.code.gson:gson:2.8.6'
+
+    //Glide
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    kapt 'com.github.bumptech.glide:compiler:4.9.0'
+
+    //Apollo
+    implementation "com.apollographql.apollo:apollo-runtime:$apolloVersion"
+    implementation "com.apollographql.apollo:apollo-rx2-support:$apolloVersion"
+    implementation "com.apollographql.apollo:apollo-android-support:$apolloVersion"
+
+    //TO Solve the issue with appollo gradle update
+    // error: cannot find symbol @Generated("Apollo GraphQL") ^ symbol: class Generated
+    compileOnly 'javax.annotation:jsr250-api:1.0'
+
+
+
+    //OkHttp
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.12.0'
+
+    // Dagger 2
+    implementation "com.google.dagger:dagger:$dagger2_version"
+    implementation "com.google.dagger:dagger-android:$dagger2_version"
+    implementation "com.google.dagger:dagger-android-support:$dagger2_version"
+    kapt "com.google.dagger:dagger-compiler:$dagger2_version"
+    kapt "com.google.dagger:dagger-android-processor:$dagger2_version"
+   // compileOnly "org.glassfish:javax.annotation:3.1.1"
+
+    //Rx
+    implementation "io.reactivex.rxjava2:rxjava:2.2.6"
+    implementation "io.reactivex.rxjava2:rxandroid:2.1.1"
+    implementation "io.reactivex.rxjava2:rxkotlin:2.2.0"
+
+    //Testing
+    implementation "junit:junit:$jUnitVersion"
+    implementation "com.nhaarman:mockito-kotlin:$mockitoKotlinVersion"
+    implementation "org.assertj:assertj-core:$assertJVersion"
+    implementation "com.google.code.gson:gson:$gsonVersion"
+
+
+    implementation 'me.angeldevil:AutoScrollViewPager:1.0.8'
+    implementation 'com.github.JakeWharton:ViewPagerIndicator:2.4.1'
+    implementation 'com.intuit.sdp:sdp-android:1.0.5'
+
+    implementation group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
+
+    implementation 'org.jsoup:jsoup:1.13.1'
+
+
+    //implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.7' //for parallel api calls
+
+
+    //navigation
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.2.1'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.2.1'
+
+    implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    kapt "androidx.lifecycle:lifecycle-common-java8:2.2.0"
+
+//    implementation "com.google.android.exoplayer:exoplayer:2.7.3"
+    implementation "com.google.android.exoplayer:exoplayer:2.11.5"
+
+    implementation files('libs/YouTubeAndroidPlayerApi.jar')
+
+}

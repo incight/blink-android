@@ -1,0 +1,8 @@
+query GetUrlResolver($url:String!){
+  urlResolver(url: $url) {
+    id
+    relative_url
+    redirectCode
+    type
+  }
+}

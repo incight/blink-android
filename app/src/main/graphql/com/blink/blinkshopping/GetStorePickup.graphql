@@ -1,0 +1,7 @@
+query  StorePickup($sku: String, $qty: Int){
+    getSourceStores (sku:$sku,qty:$qty) {
+        source_code
+        address
+        pickipfrom
+    }
+}

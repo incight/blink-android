@@ -1,0 +1,13 @@
+query GetDynamicBlock($id: Int,$customeremail:String){
+dynamicBlocks (id : $id, customeremail: $customeremail){
+    title
+    image
+    items{
+        name
+        sku
+        price
+    }
+  }
+}
+
+

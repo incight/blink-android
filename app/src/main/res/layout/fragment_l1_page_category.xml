@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+
+    <data>
+
+        <import type="androidx.lifecycle.LiveData" />
+
+        <import type="com.blink.blinkshopping.base.Resource.Loading" />
+
+        <import type="com.blink.blinkshopping.base.Resource.Failure" />
+
+        <import type="com.blink.blinkshopping.HomeLayoutsQuery.Data" />
+
+        <import type="com.blink.blinkshopping.base.Resource" />
+
+        <import type="java.util.List" />
+
+        <variable
+            name="dataLayout"
+            type="LiveData&lt;Resource&lt;com.blink.blinkshopping.HomeLayoutsQuery.Data&gt;&gt;" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".ui.lOneCategory.LOnePageCategoryFragment">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvcCategoryDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:reverseLayout="false">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </LinearLayout>
+
+</layout>

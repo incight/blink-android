@@ -1,0 +1,18 @@
+query shopByBrandImage($categoryid: String){
+    products(filter: {category_id: {eq: $categoryid}}) {
+        aggregations {
+            attribute_code
+            count
+            label
+            options {
+                label
+                value
+                count
+            }
+        }
+
+    }
+
+}
+
+

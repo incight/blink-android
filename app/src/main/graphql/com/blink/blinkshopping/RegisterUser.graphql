@@ -1,0 +1,22 @@
+mutation RegisterUser($name: String,$country:Int,$dob:String,$mobile_number: String,$lname: String,$email: String,$password: String,$gender:Int,$isSubscribe:Boolean){
+    createCustomer(
+        input: {
+            firstname: $name
+            country:$country
+            dob:$dob
+            mobile_number:$mobile_number
+            lastname: $lname
+            email: $email
+            password: $password
+            gender:$gender
+            is_subscribed: $isSubscribe
+        }
+    ) {
+        customer {
+            firstname
+            lastname
+            email
+            is_subscribed
+        }
+    }
+}

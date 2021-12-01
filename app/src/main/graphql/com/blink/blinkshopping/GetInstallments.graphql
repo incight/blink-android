@@ -1,0 +1,15 @@
+query GetInstallments($sku: String,$amount: String){
+    minstallments(sku:$sku,amount:$amount){
+        about
+        requirements
+        how_to_apply
+        installmentinfo{
+            time_interval
+            percentage
+            minimum_amount
+            interval
+            time
+            emi_calculation
+        }
+    }
+}

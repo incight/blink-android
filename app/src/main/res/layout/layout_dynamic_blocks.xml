@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="dynamicblocks"
+            type="com.blink.blinkshopping.models.BaseDynamicLinks" />
+
+        <variable
+            name="product"
+            type="com.blink.blinkshopping.models.ProductItem" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rlDynamic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/dp10">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/dynamicBanner"
+            android:layout_width="match_parent"
+            android:layout_height="215dp"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            bind:loadimage="@{dynamicblocks.data.dynamicBlocks.get(0).imageUrl()}" />
+
+        <com.blink.blinkshopping.customViews.CustomTextView
+            android:id="@+id/dynamicBannerText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/dynamicBanner"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@{dynamicblocks.data.dynamicBlocks.get(0).html2text()}"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp18"
+            app:layout_constraintBottom_toBottomOf="@+id/dynamicBanner"
+            app:layout_constraintTop_toTopOf="@+id/dynamicBanner"
+            app:layout_constraintVertical_bias="0.2"
+            bind:layout_editor_absoluteX="0dp"
+            bind:text="Back to school UPTO 70% OFF" />
+
+
+        <com.blink.blinkshopping.customViews.CustomBoldTextView
+            android:id="@+id/dynamiclearnmore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/yellow_bg_4dp"
+            android:paddingHorizontal="@dimen/dp17"
+            android:paddingVertical="@dimen/dp3"
+            android:text="@string/view_all"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dynamicBannerText" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvDynamicBlocks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lldynamic"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="@dimen/dp20"
+            app:layout_constraintTop_toBottomOf="@+id/dynamiclearnmore"
+            app:layout_constraintVertical_bias="0.5" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

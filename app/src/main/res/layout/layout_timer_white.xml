@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/dp2"
+        android:layout_marginLeft="@dimen/dp2"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="31dp"
+            android:layout_height="31dp"
+            android:layout_marginRight="3dp"
+            android:background="@drawable/light_yellow_bg"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.blink.blinkshopping.customViews.CustomBoldTextView
+                android:id="@+id/tv_days"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/light_black"
+                android:includeFontPadding="false"
+                android:textSize="@dimen/sp15" />
+
+            <com.blink.blinkshopping.customViews.CustomTextView
+                android:id="@+id/tv_days_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/line_bg"
+                android:includeFontPadding="false"
+                android:textSize="@dimen/sp8" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="31dp"
+            android:layout_height="31dp"
+            android:layout_marginRight="3dp"
+            android:background="@drawable/light_yellow_bg"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.blink.blinkshopping.customViews.CustomBoldTextView
+                android:id="@+id/tv_hours"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/light_black"
+                android:includeFontPadding="false"
+                android:textSize="@dimen/sp15" />
+
+            <com.blink.blinkshopping.customViews.CustomTextView
+                android:id="@+id/tv_hours_text"
+                android:layout_width="wrap_content"
+                android:includeFontPadding="false"
+                android:layout_height="wrap_content"
+                android:textColor="@color/line_bg"
+                android:textSize="@dimen/sp8" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="31dp"
+            android:layout_height="31dp"
+            android:layout_marginRight="3dp"
+            android:background="@drawable/light_yellow_bg"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.blink.blinkshopping.customViews.CustomBoldTextView
+                android:id="@+id/tv_mins"
+                android:includeFontPadding="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/sp15" />
+
+            <com.blink.blinkshopping.customViews.CustomTextView
+                android:id="@+id/tv_mins_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/line_bg"
+                android:includeFontPadding="false"
+                android:textSize="@dimen/sp8" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="31dp"
+            android:layout_height="31dp"
+            android:layout_marginRight="3dp"
+            android:background="@drawable/light_yellow_bg"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.blink.blinkshopping.customViews.CustomBoldTextView
+                android:id="@+id/tv_secs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/sp15" />
+
+            <com.blink.blinkshopping.customViews.CustomTextView
+                android:id="@+id/tv_secs_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:textColor="@color/line_bg"
+                android:textSize="@dimen/sp8" />
+        </LinearLayout>
+    </LinearLayout>
+
+</layout>

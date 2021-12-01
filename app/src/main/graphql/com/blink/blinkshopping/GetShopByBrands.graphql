@@ -1,0 +1,30 @@
+query shopByBrands($id: String){
+  products(filter: {category_id: {eq: $id}}) {
+    aggregations {
+      attribute_code
+      count
+      label
+      options {
+        label
+        value
+        count
+      }
+    }
+    items {
+      name
+      sku
+      price_range {
+        minimum_price {
+          regular_price {
+            value
+            currency
+          }
+        }
+      }
+    }
+    page_info {
+      page_size
+    }
+  }
+
+}

@@ -1,0 +1,13 @@
+query DailyDealsProducts{
+    dailyDealsproducts{
+        name
+        sku
+        price
+        specialprice
+        dealfrom
+        dealto
+    }
+}
+
+
+

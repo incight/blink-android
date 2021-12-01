@@ -1,0 +1,50 @@
+query levelcategoryList($id:String){
+    categoryList(filters: {ids: {eq: $id}}) {
+        children_count
+        id
+        level
+        name
+        path
+        include_in_menu
+        url_path
+        position
+        image
+        description
+        children {
+            children_count
+            id
+            level
+            name
+            path
+            include_in_menu
+            url_path
+            position
+            image
+            description
+            children {
+                children_count
+                id
+                level
+                name
+                path
+                include_in_menu
+                url_path
+                position
+                image
+                description
+                children {
+                    children_count
+                    id
+                    level
+                    name
+                    path
+                    include_in_menu
+                    url_path
+                    position
+                    image
+                    description
+                }
+            }
+        }
+    }
+}

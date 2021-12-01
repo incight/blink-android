@@ -1,0 +1,36 @@
+query CategorySliders($id: Int) {
+   categorySliders(id:$id){
+   id
+   title
+   category_image
+   status
+   block_position
+   sort_order
+   right_slider
+   bottom_slider
+   which_category
+   hero_type
+   fixed_type
+   select_category
+   hero_sku
+   image
+   image_url
+   video
+   items{
+   entity_id
+   sku
+   name
+   price
+   imageurl
+   }
+   belowitems{
+   entity_id
+   sku
+   name
+   price
+   imageurl
+   }
+   }
+   }
+
+

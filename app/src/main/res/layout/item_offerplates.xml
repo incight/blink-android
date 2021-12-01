@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.blink.blinkshopping.models.Offerplate" />
+    </data>
+
+
+    <RelativeLayout
+        android:id="@+id/lLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="92dp"
+        android:background="@color/greyBg"
+        android:paddingVertical="@dimen/_5sdp">
+<!--
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview"
+            android:layout_width="@dimen/_53sdp"
+            android:layout_height="@dimen/_53sdp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_marginVertical="@dimen/dp2"
+            android:layout_marginLeft="@dimen/dp10"
+            app:cardBackgroundColor="@color/yellow_bg"
+            app:cardCornerRadius="@dimen/_30sdp">
+-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview"
+            android:layout_width="@dimen/_55sdp"
+            android:layout_height="@dimen/_55sdp"
+            android:layout_centerInParent="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginVertical="@dimen/_2sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            app:cardBackgroundColor="@color/yellow_bg"
+            app:cardCornerRadius="@dimen/_30sdp">
+
+
+            <!--@dimen/dp30-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/offerImg"
+                    android:layout_width="@dimen/dp23"
+                    android:layout_height="@dimen/dp24"
+                    bind:loadimage="@{data.imageUrl()}" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_marginVertical="@dimen/dp2"
+            android:layout_marginLeft="@dimen/dp9"
+            android:layout_toRightOf="@+id/cardview"
+            android:orientation="vertical">
+
+            <com.blink.blinkshopping.customViews.CustomBoldTextView
+                android:id="@+id/offerTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp5"
+                android:includeFontPadding="false"
+                android:text="@{data.title}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp12" />
+
+
+            <com.blink.blinkshopping.customViews.CustomTextView
+                android:id="@+id/offerDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/offerTitle"
+                android:layout_marginRight="@dimen/dp5"
+                android:layout_toRightOf="@+id/cardview"
+                android:includeFontPadding="false"
+                android:text="@{data.description}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp12" />
+
+            <com.blink.blinkshopping.customViews.CustomTextView
+                android:id="@+id/offerLink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/offerDetail"
+                android:layout_marginTop="@dimen/dp7"
+                android:layout_marginRight="@dimen/dp5"
+                android:layout_toRightOf="@+id/cardview"
+                android:text="@{data.label}"
+                android:textColor="@color/price_blue_color"
+                android:textSize="@dimen/sp11" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</layout>

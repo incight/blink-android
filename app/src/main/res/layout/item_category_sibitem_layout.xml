@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="product"
+            type="com.blink.blinkshopping.models.ProductItem" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/dp125"
+        android:layout_height="@dimen/dp125"
+        android:layout_marginLeft="@dimen/dp4"
+        android:layout_marginTop="@dimen/dp5"
+        android:layout_marginRight="@dimen/dp7"
+        android:layout_marginBottom="@dimen/dp2"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp">
+
+        <RelativeLayout
+            android:id="@+id/rlayout1"
+            android:layout_width="@dimen/dp125"
+            android:layout_height="@dimen/dp125"
+            android:gravity="center">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/dodimgItem"
+                android:layout_width="@dimen/dp95"
+                android:layout_height="@dimen/dp78"
+                android:layout_marginTop="@dimen/dp2"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/ic_blink_logo"
+                bind:loadimage="@{product.imageUrl()}" />
+
+            <com.blink.blinkshopping.customViews.CustomTextView
+                android:id="@+id/txtActualPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dodimgItem"
+                android:includeFontPadding="false"
+                android:text="@{product.actualPrice_()}"
+                android:textColor="@color/price_grey_color"
+                android:textSize="@dimen/sp10"
+                android:visibility="@{product.checkPriceEquality() ? View.INVISIBLE : View.VISIBLE}" />
+
+            <com.blink.blinkshopping.customViews.CustomBoldTextView
+                android:id="@+id/txtOfferedPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtActualPrice"
+                android:layout_marginBottom="@dimen/dp2"
+                android:text="@{product.offeredPrice()}"
+                android:textColor="@color/price_blue_color"
+                android:textSize="@dimen/sp15" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</layout>

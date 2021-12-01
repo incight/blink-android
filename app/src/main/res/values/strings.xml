@@ -1,0 +1,122 @@
+<resources>
+    <string name="app_name">Blink</string>
+    <string name="loading">Loading Blink…</string>
+    <string name="error">An error has occurred</string>
+    <string name="weight">Weight</string>
+    <string name="height">Height</string>
+    <string name="resistance">Resistant: </string>
+    <string name="specialAttacks">Special Attacks</string>
+    <string name="weaknesses">Weaknesses</string>
+    <string name="evolutions">Evolutions</string>
+    <string name="loadingDetail">Getting Details..</string>
+
+    <string name="sub_product">Sub Product</string>
+    <string name="sub_sub_product">Sub Sub Product</string>
+    <string name="add_to_cart">Add to Cart</string>
+    <string name="heading">Heading</string>
+    <string name="bestbuy"><u>Best Buy</u></string>
+    <string name="blink"><u>Blink</u></string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="see_more_by_asus"><u>Asus</u></string>
+    <string name="or_monthly_installment">or Monthly Installment</string>
+    <string name="frequent_brought">Frequently brought together</string>
+    <string name="temp"><u><![CDATA[See other (18) used & new options strating from 1800KD]]></u></string>
+    <string name="have_one_sell">Have one to sell?</string>
+    <string name="sell_on_blink">Sell on Blink</string>
+    <string name="notify">Notify me</string>
+    <string name="buy_all">Buy All</string>
+    <string name="deal_of_the_day">Deal of the Day</string>
+    <string name="recommended_for_you">Recommended for you</string>
+    <string name="shop_all">Shop all</string>
+    <string name="new_arrivals">New Arrivals</string>
+    <string name="view_all">VIEW ALL</string>
+    <string name="inspire_browsing_history">Inspired by your browsing history</string>
+    <string name="viewall">View all</string>
+    <string name="read_more_product_details"><u>Read more product details</u></string>
+    <string name="report_incorrect_product_information"><u>Report incorrect product information</u></string>
+    <string name="q_a"><![CDATA[Q&A]]></string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="register">Register</string>
+    <string name="customer_account">Customer Account</string>
+    <string name="email">Email</string>
+    <string name="forgetpass"><u>Forgot password?</u></string>
+    <string name="login">Login</string>
+    <string name="already_have_acc">Already have an account?</string>
+    <string name="or">Or</string>
+    <string name="signup_social">Sign Up with Social</string>
+    <string name="signin_social">Continue with Social</string>
+
+
+    <string name="enter_email"><font size="10">Enter Your Email</font></string>
+    <string name="enter_your_first_name"><font size="10">Enter Your First Name</font></string>
+    <string name="enter_your_last_name"><font size="10">Enter Your Last Name</font></string>
+    <string name="phone"><font size="10">Phone</font></string>
+    <string name="phone1">Mobile Number</string>
+    <string name="hpassword"><font size="10">Password</font></string>
+    <string name="hconfirm_pass"><font size="10">Confirm Password</font></string>
+    <string name="select"><font size="10">Select</font></string>
+
+    <string name="password">Password</string>
+    <string name="confirm_pass">Confirm Password</string>
+
+
+    <string name="use_this_emailrecovery">Use this email for account recovery</string>
+    <string name="f_name">First Name</string>
+    <string name="l_name">Last Name</string>
+    <string name="country">Country</string>
+    <string name="get_update">I would like to get email updates from blink.com.kw</string>
+    <string name="terms"><u>Terms and Conditions</u></string>
+    <string name="submit">Submit</string>
+    <string name="signUp">Sign Up</string>
+    <string name="continue_">Continue</string>
+
+    <string name="dob">Date of Birth</string>
+    <string name="gender">Gender</string>
+    <string name="female">Female</string>
+    <string name="male">Male</string>
+    <string name="forgetPwdTxt">Forgot password</string>
+    <string name="enter_registered_email">Enter registered email</string>
+    <string name="resent_otp_again">Resend OTP again</string>
+    <string name="dont_have_the_acccount">Don\'t have the acccount?</string>
+    <string name="register_now"><u>Register now</u></string>
+    <string name="do_you_need_help">Do you need help?</string>
+    <string name="call">Call:</string>
+    <string name="resetPwd">Reset password</string>
+    <string name="new_pwd">New Password</string>
+    <string name="strong">Strong</string>
+    <string name="verify_mobile_number_and_email_id">Verify mobile number and email ID</string>
+    <string name="enter_registered_mobile_number">Enter registered Mobile number</string>
+    <string name="enter_otp">Enter OTP</string>
+    <string name="ok">Ok</string>
+    <string name="error_email">The Email field is not a valid e-mail address</string>
+    <string name="email_suggetion">Enter registered email ID to reset your password.</string>
+    <string name="isRequire">Is required.</string>
+    <string name="join_us">Join us &amp; get 20% off on your first order</string>
+    <string name="error_countryCode">Please select country code</string>
+    <string name="password_strength_caption">Password Strength: {0}</string>
+
+    <string name="enter_ur_otp">Enter your OTP</string>
+
+
+    <string name="password_strength_weak">too short</string>
+    <string name="password_strength_medium">Password Strength is Weak</string>
+    <string name="password_strength_strong">Password Strength is Medium</string>
+    <string name="password_strength_very_strong">Password Strength is Strong</string>
+    <string name="is_required">Is required</string>
+    <string name="choose_store">Choose Store</string>
+    <string name="top_rated">Top Rated</string>
+
+    <string name="wrong_cred">Invalid username or password.\nPlease enter valid credentials</string>
+    <string name="send_otp">SEND OTP</string>
+
+    <string name="just_for_you">Just for you</string>
+    <string name="electronic">Electronic</string>
+    <string name="item_name">Item Name</string>
+    <string name="promotions_and_offers">Promotions and Offers</string>
+    <string name="best_seller">Best Seller</string>
+    <string name="premium_coffee_machines">Premium Coffee Machines</string>
+
+
+</resources>

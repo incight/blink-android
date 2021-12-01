@@ -1,0 +1,10 @@
+mutation VerifyOtp($email: String,$mobileOtpcode: String,$emailotp: String){
+    verifyOtp(input : {
+        email: $email
+        otpcode: $mobileOtpcode
+        emailotp: $emailotp
+    } ) {
+        status
+        message
+    }
+}

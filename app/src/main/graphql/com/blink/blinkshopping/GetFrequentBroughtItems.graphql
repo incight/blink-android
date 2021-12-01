@@ -1,0 +1,8 @@
+query FrequentlyBoughtTogether($id: [Int]) {
+    frequentlyBoughtTogether(ids:$id){
+        items {
+            entity_id
+            sku
+        }
+    }
+}

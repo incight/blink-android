@@ -1,0 +1,38 @@
+query SliderBlock($id: Int!, $page: [String], $category: [Int]) {
+    sliderById(id:$id,page:$page,category:$category) {
+        slider_id
+        name
+        status
+        location
+        store_ids
+        categorylist
+        customer_group_ids
+        priority
+        effect
+        autoWidth
+        autoHeight
+        design
+        loop
+        lazyLoad
+        autoplay
+        autoplayTimeout
+        nav
+        dots
+        is_responsive
+        responsive_items
+        from_date
+        to_date
+        items{
+            banner_id
+            name
+            status
+            type
+            content
+            image
+            url_banner
+            title
+            newtab
+            position
+        }
+    }
+}

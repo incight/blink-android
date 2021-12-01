@@ -1,0 +1,19 @@
+query  AdsBlocks {
+    adsBlocks {
+
+        ads_block_id
+        status
+        title
+        store_id
+        number_of_blocks
+        in_which_add_block
+        items {
+            ads_block_id
+            ads_block_image_id
+            image
+            status
+            title
+            url
+        }
+    }
+}

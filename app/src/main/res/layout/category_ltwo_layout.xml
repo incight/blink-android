@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="DataBinding"
+            type="com.blink.blinkshopping.models.BaseSlider" />
+    </data>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:gravity="center|top"
+        android:layout_marginTop="@dimen/_26sdp"
+        android:padding="@dimen/_4sdp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:background="@color/white"
+        android:layout_height="@dimen/_83sdp"
+        android:layout_width="@dimen/_83sdp">
+
+
+        <ImageView
+            android:id="@+id/ivItemImage"
+            android:layout_width="@dimen/_50sdp"
+            android:visibility="visible"
+            android:background="@android:color/transparent"
+            android:layout_height="@dimen/_50sdp"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            android:layout_gravity="center_horizontal"
+            android:adjustViewBounds="true"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <com.blink.blinkshopping.customViews.CustomTextView
+            android:id="@+id/tvItemName"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:textSize="@dimen/dp9"
+            android:textColor="@color/gray_ltwo_color"
+            android:layout_height="wrap_content"
+            android:text="@string/item_name" />
+    </LinearLayout>
+</layout>

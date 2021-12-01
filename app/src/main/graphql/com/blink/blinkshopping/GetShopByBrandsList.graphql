@@ -1,0 +1,8 @@
+query ShopByBrandsWithAttributes($filters: [aggregationsInput]){
+     brandsList(
+      filters: $filters
+    ){
+      label
+      img
+    }
+  }

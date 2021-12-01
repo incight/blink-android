@@ -1,0 +1,9 @@
+query GetCountriesList{
+    countrycode{
+        id
+        country_code
+        mobile_code
+        lable
+        flag
+    }
+}

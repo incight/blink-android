@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="slider"
+            type="com.blink.blinkshopping.models.BaseSlider" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/slidersLt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <me.angeldevil.autoscrollviewpager.AutoScrollViewPager
+            android:id="@+id/view_pager_offer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp226"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+<!--@dimen/_200sdp-->
+
+        <com.viewpagerindicator.CirclePageIndicator
+            android:id="@+id/indicator"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_alignBottom="@+id/view_pager_offer"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/_31sdp"
+            android:paddingTop="@dimen/_10sdp"
+            app:fillColor="@color/fillfolor"
+            app:layout_constraintBottom_toBottomOf="@+id/view_pager_offer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:pageColor="@color/indicator_color"
+            app:radius="3dp" />
+
+
+        <com.blink.blinkshopping.customViews.CustomBoldTextView
+            android:id="@+id/textView27"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/indicator"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp10"
+            android:layout_marginBottom="@dimen/_55sdp"
+            android:background="@drawable/yellow_bg"
+            android:paddingHorizontal="@dimen/dp8"
+            android:paddingVertical="@dimen/dp5"
+            android:text="LEARN MORE"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

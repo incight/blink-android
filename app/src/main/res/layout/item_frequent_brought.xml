@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="product"
+            type="com.blink.blinkshopping.models.ProductItem" />
+    </data>
+
+
+    <RelativeLayout
+        android:id="@+id/lLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center|left">
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/dp11"
+            android:button="@drawable/rectangle_checkbox"
+            android:gravity="center" />
+
+        <ImageView
+            android:id="@+id/frquentImg"
+            android:layout_width="70dp"
+            android:layout_height="71dp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_toRightOf="@+id/checkbox"
+            bind:loadimage="@{product.image.url}" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp17"
+            android:layout_toRightOf="@+id/frquentImg">
+
+            <com.blink.blinkshopping.customViews.CustomTextView
+                android:id="@+id/productTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginVertical="@dimen/dp1"
+                android:text="@{product.name}"
+                android:textSize="@dimen/sp14"
+                android:textColor="@color/black" />
+
+            <LinearLayout
+                android:id="@+id/ltRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/productTitle"
+                android:layout_marginVertical="@dimen/dp1"
+                android:gravity="center|left"
+                android:orientation="horizontal">
+
+                <com.blink.blinkshopping.RatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:progressed="@drawable/star_select"
+                    android:layout_marginRight="@dimen/dp5"
+                    app:progress="@drawable/star_deselect"
+                    app:automatic="fully"
+                    app:isIndicator="false"
+                    app:numStars="5"
+                    app:rating="3.5"
+                    app:spacing="5dp"
+                    app:stepSize="0.5" />
+
+                <androidx.appcompat.widget.AppCompatRatingBar
+                    android:id="@+id/rbRating"
+                    style="@style/VeryYellow.Small.AppCompatRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:numStars="5"
+                    android:paddingTop="@dimen/dp3"
+                    android:rating="3.5"
+                    android:stepSize="0.5"
+                    android:visibility="gone"
+                    android:theme="@style/VeryYellow.Small.AppCompatRatingBar" />
+
+                <com.blink.blinkshopping.customViews.CustomTextView
+                    android:id="@+id/txtratingCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="129"
+                    android:textSize="@dimen/sp12" />
+            </LinearLayout>
+
+            <com.blink.blinkshopping.customViews.CustomTextView
+                android:id="@+id/productPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ltRating"
+                android:layout_marginVertical="@dimen/dp1"
+                android:textSize="@dimen/sp16"
+                android:text="@{product.actualPrice()}"
+                android:textColor="@color/price_blue_color" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+</layout>

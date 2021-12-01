@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="product"
+            type="com.blink.blinkshopping.models.DOption" />
+    </data>
+
+
+    <LinearLayout
+        android:id="@+id/lLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/_2sdp"
+        android:layout_marginRight="@dimen/_2sdp"
+        android:background="@color/white"
+        android:gravity="center|left"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/_5sdp">
+
+        <RadioButton
+            android:id="@+id/checkbox"
+            android:button="@drawable/circle_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:clickable="false"
+            android:focusable="false" />
+
+        <com.blink.blinkshopping.customViews.CustomTextView
+            android:id="@+id/productTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_7sdp"
+            android:layout_marginVertical="@dimen/_3sdp"
+            android:layout_toRightOf="@+id/frquentImg"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp16" />
+        <!-- android:text="@{product.deliveryOptionsName()}" -->
+    </LinearLayout>
+
+</layout>

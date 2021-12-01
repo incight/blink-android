@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/coordinatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.drawerlayout.widget.DrawerLayout
+            android:id="@+id/drawer_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            tools:openDrawer="start">
+
+            <include
+                layout="@layout/app_bar_home"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_42sdp" />
+
+            <com.google.android.material.navigation.NavigationView
+                android:id="@+id/nav_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:fitsSystemWindows="true"
+                app:itemIconTint="#000000"
+                app:itemTextColor="#000000">
+                <!--app:headerLayout="@layout/nav_header_home"-->
+                <!--app:menu="@menu/activity_home_drawer"-->
+
+                <include
+                    layout="@layout/navigation_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </com.google.android.material.navigation.NavigationView>
+
+            <!--
+                    <com.google.android.material.navigation.NavigationView
+                        android:id="@+id/nav_view_filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="end"
+                        android:background="#00000000"
+                        android:fitsSystemWindows="true"
+                        app:itemIconTint="#00000000"
+                        app:itemTextColor="#000000">
+                        &lt;!&ndash;app:headerLayout="@layout/nav_header_home"&ndash;&gt;
+                        &lt;!&ndash;app:menu="@menu/activity_home_drawer"&ndash;&gt;
+
+                        <include
+                            layout="@layout/filter_bar_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                    </com.google.android.material.navigation.NavigationView>
+            -->
+        </androidx.drawerlayout.widget.DrawerLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

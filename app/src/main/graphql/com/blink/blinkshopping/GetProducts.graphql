@@ -1,0 +1,50 @@
+#query products($category_id: String,$attribute_code: String,$value: String)
+query products($category_id: String)
+{
+#    products(filter: {category_id: {eq: "$category_id"},$attribute_code: {eq: "$value"}}) {
+        products(filter: {category_id: {eq: $category_id} }) {
+        aggregations {
+            attribute_code
+            count
+            label
+            options {
+                label
+                value
+                count
+            }
+        }
+        page_info {
+            current_page
+            page_size
+            total_pages
+        }
+
+        items {
+            name
+            sku
+            stock_status
+            small_image {
+                url
+            }
+
+            price_range {
+                minimum_price {
+                    regular_price {
+                        value
+                        currency
+                    }
+                    final_price {
+                        value
+                        currency
+                    }
+                    discount {
+                        amount_off
+                        percent_off
+                    }
+
+                }
+            }
+        }
+
+    }
+}

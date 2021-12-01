@@ -1,0 +1,11 @@
+query getBrandImageList($atribute_code: String,$id: [String]){
+    brandsList(
+        filters:[
+            {
+                attribute_code :$atribute_code,options:$id}
+        ]
+    ){
+        label
+        img
+    }
+}

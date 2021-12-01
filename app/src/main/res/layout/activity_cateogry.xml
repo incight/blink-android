@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="androidx.lifecycle.LiveData" />
+
+        <import type="com.blink.blinkshopping.base.Resource.Loading" />
+
+        <import type="com.blink.blinkshopping.base.Resource.Failure" />
+
+        <import type="com.blink.blinkshopping.HomeLayoutsQuery.Data" />
+
+        <import type="com.blink.blinkshopping.base.Resource" />
+
+        <import type="java.util.List" />
+
+        <variable
+            name="data"
+            type="LiveData&lt;Resource&lt;com.blink.blinkshopping.HomeLayoutsQuery.Data&gt;&gt;" />
+    </data>
+
+    <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/mainView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context=".ui.main.MainActivity"
+        tools:showIn="@layout/app_bar_home">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mainActivityRoot"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/app_bg">
+
+
+            <LinearLayout
+                android:id="@+id/activity_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvForAllViews"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/loadingLayout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:visibleGone="@{data instanceof Resource.Loading}">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/loadingAnim"
+                    android:layout_width="@dimen/loading_anim_size"
+                    android:layout_height="@dimen/loading_anim_size"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="anims/loading.json"
+                    app:lottie_loop="true" />
+
+                <com.blink.blinkshopping.customViews.CustomTextView
+                    android:id="@+id/loadingText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/loading"
+                    android:textSize="16sp"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/errorLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16sp"
+                android:layout_marginLeft="16sp"
+                android:layout_marginEnd="16sp"
+                android:layout_marginRight="16sp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:visibleGone="@{data instanceof Resource.Failure}">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/animation_view2"
+                    android:layout_width="@dimen/loading_anim_size"
+                    android:layout_height="@dimen/loading_anim_size"
+                    android:layout_gravity="center"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="anims/error.json"
+                    app:lottie_loop="true" />
+
+                <com.blink.blinkshopping.customViews.CustomTextView
+                    android:id="@+id/errorText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/error"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/animation_view2" />
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+
+
+</layout>

@@ -1,0 +1,6 @@
+query bestsellers($Categoryid: Int){
+  bestSeller(id:$Categoryid){
+    sku
+  }
+}
+

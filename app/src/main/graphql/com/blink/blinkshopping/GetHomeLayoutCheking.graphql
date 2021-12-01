@@ -1,0 +1,15 @@
+query HomeLayouts($layout: String!,$device_type:String) {
+    layouts(page : $layout,device_type:$device_type) {
+        id
+        page
+        status
+        items{
+            id
+            block_type
+            block_type_id
+            status
+            position
+        }
+    }
+
+}

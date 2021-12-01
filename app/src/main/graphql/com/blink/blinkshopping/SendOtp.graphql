@@ -1,0 +1,10 @@
+mutation SendOtp($email: String,$mobilenumber: String,$type: String){
+    sendOtp(input : {
+        email: $email
+        mobilenumber: $mobilenumber
+        type:$type
+    }) {
+        status
+        message
+    }
+}

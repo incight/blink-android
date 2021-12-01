@@ -1,0 +1,6 @@
+query  GetMegaMenu {
+   megaMenuLinks {
+       title
+       url
+     }
+}

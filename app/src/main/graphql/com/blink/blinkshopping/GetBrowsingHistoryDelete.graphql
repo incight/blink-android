@@ -1,0 +1,5 @@
+mutation browsingHistoryDelete($productIds:[Int]) {
+    browsingHistoryMutation(productIds:$productIds,type:"delete"){
+        status
+    }
+}

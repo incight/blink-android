@@ -1,0 +1,9 @@
+query GetAdsimages($id: [Int]){
+    adsimages(ids:$id){
+        title
+        items{
+            name
+            image
+        }
+    }
+}

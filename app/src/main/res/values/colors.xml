@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="errColor">#f44336</color>
+    <color name="redcolor">#E9002C</color>
+    <color name="yellowWarning">#ffb74d</color>
+    <color name="greencolor">#2EB20A</color>
+    <color name="white">#FFFFFF</color>
+    <color name="white_transperent">#B3ffffff</color>
+
+    <color name="light_black">#202020</color>
+
+    <color name="line_bg">#434343</color>
+    <color name="gray_ltwo_color">#535458</color>
+
+    <color name="yellow_bg">#FFD500</color>
+    <color name="border_bg">#7D7777</color>
+    <color name="colorPrimary">#41417f</color>
+    <color name="colorPrimaryDark">@color/app_bg</color>
+    <color name="app_bg">#F9F9F9</color>
+    <color name="colorAccent">#7D7777</color>
+    <color name="yellowColor">#FFF200</color>
+    <color name="skyBlueColor">#0FACF3</color>
+
+    <color name="checkLoginColor">#585858</color>
+    <color name="borderBg">#818181</color>
+    <color name="lightBorderBg">#CFCFCF</color>
+     <color name="view_color">#707070</color>
+    <color name="black">#000000</color>
+    <color name="price_grey_color">#8E8E8E</color>
+    <color name="price_blue_color">#1174C7</color>
+    <color name="greyBg">#EBEBEB</color>
+    <color name="lightBlacktxt">#646464</color>
+    <color name="product_name_color">#4E4E4E</color>
+    <color name="ratingText">#575757</color>
+    <color name="header_color">#040404</color>
+    <color name="selected_grid_itmes">#5079FF</color>
+
+    <color name="right_green_color">#359128</color>
+    <color name="right_light_bg">#DCDCDC</color>
+
+    <color name="full_light_grey">#373737</color>
+    <color name="bottom_color_grey">#444444</color>
+    <color name="headingColor">#313237</color>
+
+    <color name="specific_bg">#EEEEEE</color>
+    <color name="store_color">#828383</color>
+    <color name="gray_color">#6B6B6B</color>
+    <color name="textColorPrimary">#41417f</color>
+    <color name="light_gray">#dbdbdb</color>
+    <color name="gray">#7e7e7e</color>
+    <color name="semi_gray">#979797</color>
+    <color name="dark_gray">#696969</color>
+
+    <color name="indicator_color">#ADADAD</color>
+    <color name="fillfolor">#E5E5E5</color>
+
+    <color name="bg_color">#f7f7f7</color>
+
+    <color name="black_effective">#2a2a2a</color>
+    <color name="shadow">#d0d8dc</color>
+    <color name="extrashadow">#10000000</color>
+
+
+    <color name="transparent">#00000000</color>
+    <color name="translucent_white">#88ffffff</color>
+    <color name="fb">#3b5998</color>
+    <color name="google">#d34836</color>
+    <color name="smallblk_redcolor">#FF0000</color>
+    <!--Design colors-->
+    <color name="red_terminate">#dd261a</color>
+    <color name="red_dark">#F06423</color>
+    <color name="red_dark2">#D85A1B</color>
+    <color name="cyan_light">#c9ebee</color>
+    <color name="cyan">#b5e3e7</color>
+    <color name="cyan_dark">#70BDC6</color>
+    <color name="navy_blue">#214258</color>
+    <color name="navy_blue_dark">#1C3A4E</color>
+    <color name="light_green">#78DC96</color>
+    <color name="light_blue">#55C8F0</color>
+    <color name="blue_black_dark">#13171d</color>
+    <color name="blue_black_light">#516179</color>
+    <color name="blue_grey_light">#A5B4C8</color>
+    <color name="orange">#FFA500</color>
+    <color name="yellow">#fff44f</color>
+
+    <color name="line_color">#DADADA</color>
+
+
+    <color name="tooshort">#bcbcbc</color>
+    <color name="weak">#ab001c</color>
+    <color name="medium">#ff8b00</color>
+    <color name="strong">#00c113</color>
+
+
+    <color name="colorDot">#D2D2D2</color>
+
+</resources>
+
+

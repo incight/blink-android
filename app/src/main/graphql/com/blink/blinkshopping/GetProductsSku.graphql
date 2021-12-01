@@ -1,0 +1,34 @@
+ query ProductsSkuByList($in:[String]) {
+  products(filter: {sku: {in:$in}}) {
+ items {
+      id
+      name
+      sku
+   image {
+        url
+        label
+      }
+      small_image{
+          url
+          label
+      }
+      price_range {
+              minimum_price {
+                discount{
+                  amount_off
+                  percent_off
+                }
+                regular_price {
+                  value
+                  currency
+                }
+                final_price{
+                  value
+                  currency
+                }
+              }
+            }
+    }
+
+  }
+}

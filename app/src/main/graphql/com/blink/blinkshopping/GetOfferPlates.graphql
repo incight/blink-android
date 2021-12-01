@@ -1,0 +1,9 @@
+query OfferPlates{
+    offerplates{
+        title
+        description
+        label
+        imageurl
+        link
+    }
+}

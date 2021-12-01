@@ -1,0 +1,8 @@
+query NewArrivalsProducts($id: Int) {
+    newArrivalsproducts(id : $id) {
+        name
+        sku
+        price
+        imageurl
+    }
+}

@@ -1,0 +1,14 @@
+query categoryDetails($category: String){
+   layouts(page : $category) {
+    id
+    page
+    status
+    items{
+        id
+        block_type
+        block_type_id
+        status
+        position
+    }
+  }
+}

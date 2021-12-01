@@ -1,0 +1,140 @@
+query ProductsForSKU($sku: String!)
+{
+
+    products(filter: {sku: {eq: $sku}}) {
+        items {
+            __typename
+            categories {
+                breadcrumbs {
+                    category_id
+                }
+            }
+
+            description {
+                html
+            }
+
+            media_gallery_entries {
+                id
+                label
+                position
+                disabled
+                file
+            }
+            meta_description
+            name
+            price {
+                regularPrice {
+                    amount {
+                        currency
+                        value
+                    }
+                }
+            }
+            id
+            sku
+            blink_highlighter
+            blk_installment_info
+            blk_installment_enable
+            stock_status
+            price_range {
+                minimum_price {
+                    regular_price {
+                        value
+                        currency
+                    }
+                    final_price {
+                        value
+                        currency
+                    }
+                    discount {
+                        amount_off
+                        percent_off
+                    }
+                }
+                maximum_price {
+                    regular_price {
+                        value
+                        currency
+                    }
+                    final_price {
+                        value
+                        currency
+                    }
+                    discount {
+                        amount_off
+                        percent_off
+                    }
+                }
+            }
+            small_image {
+                url
+            }
+            media_gallery {
+                url
+                label
+                disabled
+                ... on ProductVideo {
+                    video_content {
+                        media_type
+                        video_provider
+                        video_url
+                        video_title
+                        video_description
+                        video_metadata
+                    }
+                }
+            }
+            url_key
+            ... on ConfigurableProduct {
+                configurable_options {
+                    attribute_code
+                    attribute_id
+                    id
+                    label
+                    values {
+                        default_label
+                        label
+                        store_label
+                        use_default_value
+                        value_index
+                        swatch_data {
+                            ... on ImageSwatchData {
+                                thumbnail
+                            }
+                            value
+                        }
+                    }
+                }
+                variants {
+                    attributes {
+                        code
+                        value_index
+                    }
+                    product {
+                        id
+                        media_gallery_entries {
+                            id
+                            disabled
+                            file
+                            label
+                            position
+                        }
+                        sku
+                        stock_status
+                        price {
+                            regularPrice {
+                                amount {
+                                    currency
+                                    value
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+}

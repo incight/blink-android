@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="OtpTextView">
+        <attr name="android:textColor" />
+        <attr name="otp" format="string" />
+        <attr name="hide_otp" format="boolean" />
+        <attr name="hide_otp_drawable" format="reference" />
+        <attr name="length" format="integer" />
+        <attr name="width" format="dimension" />
+        <attr name="height" format="dimension" />
+        <attr name="box_margin" format="dimension" />
+        <attr name="box_margin_left" format="dimension" />
+        <attr name="box_margin_right" format="dimension" />
+        <attr name="box_margin_top" format="dimension" />
+        <attr name="box_margin_bottom" format="dimension" />
+        <attr name="bar_height" format="dimension" />
+        <attr name="bar_enabled" format="boolean" />
+        <attr name="otp_box_background" format="reference" />
+        <attr name="otp_box_background_active" format="reference" />
+        <attr name="otp_box_background_inactive" format="reference" />
+        <attr name="otp_box_background_success" format="reference" />
+        <attr name="otp_box_background_error" format="reference" />
+        <attr name="bar_margin" format="dimension" />
+        <attr name="bar_margin_bottom" format="dimension" />
+        <attr name="bar_margin_right" format="dimension" />
+        <attr name="bar_margin_left" format="dimension" />
+        <attr name="bar_margin_top" format="dimension" />
+        <attr name="otp_text_size" format="dimension" />
+        <attr name="bar_active_color" format="color" />
+        <attr name="bar_inactive_color" format="color" />
+        <attr name="bar_error_color" format="color" />
+        <attr name="bar_success_color" format="color" />
+        <attr name="text_typeface" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="RatingBar">
+        <!-- The number of stars (or rating items) to show. -->
+        <attr name="numStars" format="integer" />
+        <!-- The rating to set by default. -->
+        <attr name="rating" format="float" />
+        <!-- The step size of the rating. -->
+        <attr name="stepSize" format="float" />
+        <!-- Whether this rating bar is an indicator (and non-changeable by the user). -->
+        <attr name="isIndicator" format="boolean" />
+        <!-- The spacing between items. -->
+        <attr name="spacing" format="dimension" />
+        <!-- What kind of mode for automatic adaptation. -->
+        <attr name="automatic" format="enum">
+            <!-- Fully automatic  -->
+            <enum name="fully" value="0" />
+            <!-- Semi automatic  -->
+            <enum name="semi" value="1" />
+            <!-- Manual -->
+            <enum name="manual" value="2" />
+        </attr>
+        <!-- The default background image. -->
+        <attr name="progress" format="reference" />
+        <!-- The progressed background image. -->
+        <attr name="progressed" format="reference" />
+    </declare-styleable>
+
+</resources>

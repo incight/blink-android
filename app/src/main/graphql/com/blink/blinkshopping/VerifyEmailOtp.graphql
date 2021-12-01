@@ -1,0 +1,9 @@
+mutation ResetVerifyEmailOtp($email:String,$otp:String){
+    verifyEmailOtp(input : {
+        email: $email
+        otp: $otp
+    } ) {
+        status
+        token
+    }
+}
